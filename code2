@@ -1,0 +1,39 @@
+import string  #built in python operators 
+import random  #built in python operators 
+
+#created main function
+def main(): 
+    
+    #print string
+    print("Welcome to the most secure Password Generator.")
+    
+    #prompt user
+    user_input = input("Enter yes to generate password and no to quit:").lower()
+    
+    #while user inputs anything other than yes and no
+    while user_input != "yes" and "no":
+        #print string
+        print("Error...type yes or no")
+        #prompt user
+        user_input = input("Enter yes to generate password and no to quit:").lower()
+           
+
+    #while input is = yes
+    while user_input == "yes":
+            #variable named chars to include different characters
+            chars= string.ascii_letters + string.digits + string.punctuation
+            #variable named password to join chars randomly 
+            password =  "".join(random.choice(chars)for i in range((12)))
+            #print random password
+            print (password)
+            
+            #prompt password again
+            user_input = input("Enter yes to generate password and no to quit:").lower()
+          
+               
+            
+           
+                    
+        
+if _name== "main_":
+    main()
