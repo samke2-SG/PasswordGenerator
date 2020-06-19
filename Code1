@@ -1,0 +1,29 @@
+import string  #built in python operators 
+import random  #built in python operators 
+
+#created main function
+def main(): 
+    
+    #print string
+    print("Welcome to the most secure Password Generator.")
+
+    #while true loop created to generate multiple passwords
+    while True:
+        
+        #try for error and exceptions
+        try:
+            #created function called password that takes strings and chooses random characters for the password
+            def password(size=12, chars=string.ascii_letters+string.digits+string.punctuation):
+                return "".join(random.choice(chars) for n in range(size))
+            #print string
+            print("How long would you like your password to be?")
+            #prompt user to imput length of password
+            print(password(int(input('Enter a number here: '))))
+        #if user types in a character that is not a number, error will pop up
+        except ValueError:
+            #print string
+            print("ERROR!...Type in a number")
+        
+#pass through the main code onto the terminal
+if _name== "main_":
+    main()
